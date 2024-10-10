@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="CN">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>视频工具</title>
-    <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.8.1/skins/default/aliplayer-min.css"/>
-    <script charset="utf-8" type="text/javascript" src="https://g.alicdn.com/de/prismplayer/2.8.1/aliplayer-min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <title>Aliplayer Functions</title>
+    <link rel="stylesheet" href="https://g.alicdn.com/apsara-media-box/imp-web-player/2.26.1/skins/default/aliplayer-min.css" />
+    <script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/apsara-media-box/imp-web-player/2.26.1/aliplayer-min.js"></script>
 </head>
 <body>
-<div class="prism-player" id="J_prismPlayer"></div>
+<div id="player-con"></div>
 <script>
     var player = new Aliplayer({
-        id: 'J_prismPlayer',
-        width: '100%',
+        id: "player-con",
+        source: "https://l.cztvcloud.com/channels/lantian/SXwencheng1/720p.m3u8",
+        width: "100%",
+        height: "500px",
         autoplay: true,
-        cover: 'https://liveroom-img.oss-cn-qingdao.aliyuncs.com/logo.png',
-        //播放配置
-        source: 'https://l.cztvcloud.com/channels/lantian/SXwencheng1/720p.m3u8'
+        isLive: true
     }, function (player) {
-        console.log('播放器创建好了。')
+        console.log("The player is created");
     });
 </script>
-
 </body>
 </html>
